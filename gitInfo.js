@@ -43,7 +43,7 @@ let gitCloneDefinition = "git clone is a command used to a copy/clone an existin
 */
 
 //CODE HERE
-let gitStatusDefinition = "git status is a command shows information about a repo, it is used to show all the changes that will added to a commit"
+let gitStatusDefinition = "git status is a command shows information about a repo, it is used to show all the changes that will be added to a commit"
 //////////////////PROBLEM 6////////////////////
 /*
     Create a variable called 'gitAddDefinition'.  
@@ -55,7 +55,7 @@ let gitStatusDefinition = "git status is a command shows information about a rep
 
 //CODE HERE
 let gitAddDefinition = "git add is a command that adds files to be tracked"
-let gitAddCode = "git add code is a command used to add a file to either bash or vscode"
+let gitAddCode = "git add is a command that adds files to be tracked"
 //////////////////PROBLEM 7////////////////////
 /*
     Create a variable called 'gitCommitDefinition'.  

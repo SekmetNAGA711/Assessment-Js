@@ -28,7 +28,7 @@
 */
 
 const fujiAcres = [2, 3, 3, 2, 2, 2, 1]
-const galaAcres = [5, 2, 4, 3, 6, 2, 4]
+const galaAcres = [5, 2, 4, 3, 6, 2, 4]   
 const pinkAcres = [1, 5, 4, 2, 1, 5, 4]
 
 const fujiPrice = .89 
@@ -54,22 +54,22 @@ let totalPickedFuji = 0
 for(let i = 0; i <fujiAcres.length; i++) {
  totalPickedFuji += fujiAcres[i]
 }
-console.log("Total week for Fuji : ", totalPickedFuji)
+console.log("Total Acres per week for Fuji : ", totalPickedFuji)
 
 let totalPickGala = 0
 for(let i = 0; i <galaAcres.length; i++){
     totalPickGala +=galaAcres[i] 
 }
-console.log("Total week for Gala : ",totalPickGala)
+console.log("Total Acres per week for Gala : ",totalPickGala)
 
 let totalPickPink = 0
 for(let i = 0; i <pinkAcres.length; i++){
     totalPickPink +=pinkAcres[i] 
 }
-console.log("Total week for Pink : ",totalPickPink)
+console.log("Total Acres per week for Pink : ",totalPickPink)
 
 let totalAcres = totalPickedFuji + totalPickGala + totalPickPink
-console.log("The total number of Acres picked for week: ",totalAcres)
+console.log("The total number of Acres picked for the week for all three varities: ",totalAcres)
 
 // PROBLEM 2
 
@@ -85,7 +85,7 @@ console.log("The total number of Acres picked for week: ",totalAcres)
 
 // CODE HERE
 let averageDailyAcres = totalAcres / 7
-console.log("average number of acres picked per day is: ", averageDailyAcres)
+console.log("Average number of acres picked per day for all 3 varities: ", averageDailyAcres)
 
 
 
@@ -127,7 +127,7 @@ while(acresLeft > 0){
     days += 1
     acresLeft -= averageDailyAcres
 }
- console.log(`days ${days}`)
+ console.log("Days: ", days)
 
 // PROBLEM 4
 
@@ -154,12 +154,28 @@ while(acresLeft > 0){
 */
 
 // CODE HERE
+let fujiTons =[]
+let galaTons =[]
+let pinkTons =[]
 
-// let fujiTons =
-// let galaTons =
-// let pinkTons =
 
+for( let i =0; i<fujiAcres.length; i++) {
+        fujiAcres[i] *= 6.5
+        fujiTons.push(fujiAcres[i])    
+}
+console.log("fuji daily amount of apples in tons per day: ", fujiTons)
 
+for( let i =0; i<galaAcres.length; i++) {
+    galaAcres[i] *= 6.5
+    galaTons.push(galaAcres[i])    
+}
+console.log("gala daily amount of apples in tons per day: ", galaTons)
+
+for( let i =0; i<pinkAcres.length; i++) {
+    pinkAcres[i] *= 6.5
+    pinkTons.push(pinkAcres[i])    
+}
+console.log("pink daily amount of apples in tons per day: ", pinkTons)
 
 
 
@@ -181,11 +197,32 @@ while(acresLeft > 0){
 */
 
 // CODE HERE 
+let totalTonsFuji = 0
+for(let i = 0; i <fujiTons.length; i++){
+    totalTonsFuji += fujiTons[i] 
+}
+//console.log("total tons for per week for fuji: ", totalTonsFuji)
+let fujiPounds = totalTonsFuji * 2000
+console.log("total pounds for Fuji: ", fujiPounds)
 
-// let fujiPounds =
-// let galaPounds =
-// let pinkPounds =
 
+
+let totalTonsGala = 0
+for(let i = 0; i <galaTons.length; i++){
+    totalTonsGala += galaTons[i] 
+}
+//console.log("total tons for per week for Gala: ", totalTonsGala)
+let galaPounds = totalTonsGala * 2000
+console.log("total pounds for Gala: ", galaPounds)
+
+
+let totalTonsPink = 0
+for(let i = 0; i <pinkTons.length; i++){
+    totalTonsPink += pinkTons[i] 
+}
+//console.log("total tons for per week for Pink: ", totalTonsPink)
+let pinkPounds = totalTonsPink * 2000
+console.log("total pounds for Pink: ", pinkPounds)
 
 
 
@@ -209,12 +246,16 @@ while(acresLeft > 0){
 
 // CODE HERE
 
-// let fujiProfit =
-// let galaProfit =
-// let pinkProfit =
+let fujiProfit = fujiPounds * .89 
+console.log("total profit Fuji: ",fujiProfit)
 
 
+let galaProfit = galaPounds * .64
+console.log("total profit gala: ",galaProfit)
 
+
+let pinkProfit = pinkPounds * .55
+console.log("total profit Pink: ", pinkProfit)
 
 
 
@@ -229,3 +270,5 @@ while(acresLeft > 0){
 */
 
 // CODE HERE
+let totalProfit = fujiProfit + galaProfit + pinkProfit
+console.log("total profit for all three varieties: ", totalProfit)
